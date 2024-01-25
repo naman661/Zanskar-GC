@@ -57,7 +57,8 @@ main {
     justify-content: flex-start;
     height: 500px;
     width: 98%;
-    background-color:brown;
+    background-color:rgb(73, 42, 165);
+    opacity: 0.4;
     margin: 0 auto;
     border: 2px solid brown;
     flex-direction: row;
