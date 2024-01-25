@@ -32,15 +32,16 @@
     </nav>
 
     <main id = "Boxes">
-        <div id="Today's">Today's Matches</div>
+        <div id="Today's">Today's Matches
+            <ul>
+                <% for(let match of matches_temp){%>
+                    <li><%= match.date %></li>
+                <%}%>
+            </ul>
+        </div>
         <div id="CenterBox">TBDY</div>
         <div id="Upcoming">Upcoming Matches</div>
     </main>
-    <ul>
-        <% for(let match of matches){%>
-        <li><%= match.opponent %></li>
-        <%}%>
-    </ul>
     <footer>
         <p>&copy; 2024 Zanskar GC (Madhav Maheshwari & Naman)</p>
     </footer>

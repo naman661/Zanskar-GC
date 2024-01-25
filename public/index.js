@@ -17,10 +17,15 @@ app.set('view engine','ejs');
 
 app.use(express.static(path.join(__dirname,'views')));
 
+const date1 = new Date('01/25/1994');
+const date2 = new Date('01/26/2024');
 app.get('/matches',async(req,res)=>{
     const matches = await Match.find({})
-    console.log(matches)
-    res.render('matches/index',{matches})
+    const matches_temp = matches.filter((m) => m.date > date1 & m.date<date2);
+    // console.log("KAALA");
+    // console.log(typeof matches);
+    // console.log(matches_temp)
+    res.render('matches/index',{matches_temp})
     //res.send('HERE')
 })
 

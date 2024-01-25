@@ -13,25 +13,25 @@ const matches_till_friday = [
     {
         opponent: 'Shivalik',
         sport: 'Football',
-        date: Date('December 17, 1995 03:24:00'),
+        date: new Date('December 17, 1995 03:24:00'),
         level: 'qualifier'
     },
     {
         opponent: 'Udaigiri',
         sport: 'Football',
-        date: Date('December 17, 1995 03:28:00'),
+        date: new Date('December 17, 1995 03:28:00'),
         level: 'qualifier'
     },
     {
         opponent: 'Karakoram',
         sport: 'Cricket',
-        date: Date('December 18, 1995 03:24:00'),
+        date: new Date('December 18, 1995 03:24:00'),
         level: 'qualifier'
     },
     {
         opponent: 'Shivalik',
         sport: 'Volleyball',
-        date: Date('December 19, 1995 03:24:00'),
+        date: new Date('December 19, 1995 03:24:00'),
         level: 'qualifier'
     },
 ]
