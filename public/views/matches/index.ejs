@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sheets/styles.css">
+    <title>Zanskar GC</title>
+
+<style>
+    body {
+        background-image: url("Images/Bkg-Wolf.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>Zanskar Sports</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cricket">Cricket</a></li>
+            <li><a href="#football">Football</a></li>
+            <li><a href="#volleyball">Volleyball</a></li>
+        </ul>
+    </nav>
+
+    <main id = "Boxes">
+        <div id="Today's">Today's Matches</div>
+        <div id="CenterBox">TBDY</div>
+        <div id="Upcoming">Upcoming Matches</div>
+    </main>
+    <ul>
+        <% for(let match of matches){%>
+        <li><%= match.opponent %></li>
+        <%}%>
+    </ul>
+    <footer>
+        <p>&copy; 2024 Zanskar GC (Madhav Maheshwari & Naman)</p>
+    </footer>
+
+    <script src="./public/app.js"></script>
+</body>
+
+</html>
