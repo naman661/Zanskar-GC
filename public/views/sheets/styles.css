@@ -1,110 +1,175 @@
+@import url('http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css');
+@import url('https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet');
+
 h1{
-    /* padding-top: 0px; 
-    padding-bottom: 0px; */
-    /* text-align: center; */
+    font-family: 'Corben', Georgia, Times, serif;
+    font-size: 60px;
+    line-height: 100px;
     align-self: center;
     align-content: center;
     border:0px;
 }
+h2, h3, h4, h5, h6{
+    font-family: 'Corben', Georgia, Times, serif;
+    font-size: 20px;
+    line-height: 100px;
+    align-self: center;
+    align-content: center;
+    border:0px;
+}
+ 
+p, div {
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #fff6cb;
+    line-height: 25px;
+    /* opacity: 2; */
+}
+
+/* h1{
+    padding-top: 0px; 
+    padding-bottom: 0px; */
+    /* text-align: center; */
+    /* align-self: center;
+    align-content: center;
+    border:0px;
+} */
+
 body {
-    font-family: Georgia, sans-serif;
-    color: #E6F7FF;
+    color: #fff6cb;
+    line-height: 25px;
+    /* font-family: Georgia, sans-serif; */
+    /* color: #E6F7FF; */
     margin: 0;
     padding: 0;
-    background-color: #000740;
+    background: radial-gradient(#6C0394,#0E0012);
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    width: 100%;
+    align-items : center;
+    height: 100%;
+
+
+    /* Background image is centered vertically and horizontally at all times */
+    /* background-position: center center; */
+
+    /* Background image doesn't tile */
+    /* background-repeat: no-repeat; */
+
+    /* Background image is fixed in the viewport so that it doesn't move when 
+    the content's height is greater than the image's height */
+    /* background-attachment: fixed; */
+
+    /* This is what makes the background image rescale based
+    on the container's size */
+    /* background-size: cover; */
+
+    /* Location of the image */
+    /* background-image:url("/Zanskar-GC/public/views/matches/Images/Bkg-Wolf.png") ; */
+    
 }
 
 header {
-    background-color: #909090;
+    /* background-color: #909090; */
+    background-color: #17001A;
     display:flex;
     justify-content: center;
-    color: rgb(238, 190, 255);
+    /* color: rgb(238, 190, 255); */
+    color: #fff6cb;
     text-align: center;
-    /* padding: 1em 0; */
+    padding: 1em 0 2em;
     height: 3em;
 }
-h2 {
-    font-size: xx-large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-h3 {
-    font-size: xx-large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-nav {
-    background-color: #444;
-}
+
 
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0.3em;
     overflow: hidden;
 }
-
 nav li {
     float: left;
 }
 
 nav a {
     display: block;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 50;
+    /* font-family: 'nobile', Helvetica, Arial, sans-serif; */
+    font-family: 'Corben', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 25px;
+    color: #fff6cb;
     text-align: center;
-    padding: 14px 16px;
-    border-radius: 12px;
+    padding: 8px 25px;
+    border-radius: 20px;
     text-decoration: none;
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #fff6cb;
+    color: #17001A;
 }
 
 main {
     display: flex;
     justify-content: flex-start;
-    height: 500px;
+    height: 600px;
     width: 98%;
     /* background-color:rgb(73, 42, 165); */
+    /* opacity: 0.4; */
     margin: 0 auto;
     /* border: 2px solid brown; */
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: nowrap;
 }
 #Boxes div {
     /* width: 300px;
     height: 300px; */
-    /* max-width: 500px; */
     /* flex-basis: 500px; */
-    /* text-align: center; */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    flex-grow: 1;
+    text-align: center;
+    /* max-height: fit-content;
+    max-width: fit-content; */
+    /* flex-grow: 1; */
+    flex-shrink: 0;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 div:nth-of-type(2n) {
     /* background-color: aqua; */
-    color: aliceblue;
-    flex-grow: 3;
-    /* flex-shrink: 1; */
+    flex-grow: 70;
+    background-image: url("Bkg-Wolf.png");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: 60% 100%;
+    max-width: 1200px;
+    flex-shrink: 0;
 }
 div:nth-of-type(2n-1) {
-    /* background-color: teal; */
-    color:#faf5f5;
-    li {
-        margin: 30px 0;
-    }
-    text-align: left;
-    font-size: large;
     flex-grow: 1;
-    /* flex-shrink: 3; */
+    max-width: 500px;
 }
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+    /* background-color: #333; */
+    color: #fff6cb;
+    text-align: right;
+    padding: 2em 3;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 99.5%;
 }
+#Boxes div ul{
+    text-align: left;
+    list-style-type: none;
+}
+#Todays {
+    padding-left: 0.7em;
+}
+#Upcoming {
+    padding-right: 0.7em;    
+}
+a{
+    background-color: black;
+}
+  
