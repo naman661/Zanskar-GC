@@ -2,19 +2,20 @@
 <html lang="en">
 
 <head>
+    <script src="https://kit.fontawesome.com/aa7ea89012.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/sheets/styles.css">
     <title>Zanskar GC</title>
 
-<style>
-    body {
-        background-image: url("Images/Bkg-Wolf.png");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-    }
-</style>
+    <style>
+        body {
+            background-image: url("Images/Bkg-Wolf.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,20 +31,40 @@
             <li><a href="#volleyball">Volleyball</a></li>
         </ul>
     </nav>
-
-    <main id = "Boxes">
-        <div id="Today's">Today's Matches
+    <!-- <ul>
+        <li class="li1">List 1</li>
+        <li class="li2">List 2</li>
+    </ul> -->
+    
+    
+    }
+    <main id="Boxes">
+        <div id="Today's">
+            <h2>Today's Matches</h2>
             <ul>
-                <% for(let match of matches_temp){%>
-                    <li><%= match.date %></li>
-                <%}%>
+                <% for(let match of data.matchesToday) { %>
+                    <li><span style="font-size: 20px; color: red;">
+                        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.75s;" ></i>
+                    </span>
+                    <%="Zanskar VS " + match.opponent+"                  [              "+match.sport + "              ]" %></li>
+                <% } %>
             </ul>
         </div>
         <div id="CenterBox">TBDY</div>
-        <div id="Upcoming">Upcoming Matches</div>
+        <div id="Upcoming">
+            <h3>Upcoming Matches</h3>
+            <ul>
+                <% for(let match of data.matchesUpcoming) { %>
+                    <li><span style="font-size: 20px; color: red;">
+                        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 1s;" ></i>
+                    </span>
+                    <%="Zanskar            VS            " + match.opponent+"                  [              "+match.sport + "              ]" %></li>
+                <% } %>
+            </ul>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 Zanskar GC (Madhav Maheshwari & Naman)</p>
+        <p>&copy; 2024 Zanskar GC (Madhav Maheshwari & Naman & Suchir & Aviral)</p>
     </footer>
 
     <script src="./public/app.js"></script>

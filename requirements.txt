@@ -1,0 +1,6 @@
+mongo db
+mongosh
+mongo shell
+mongoose
+node
+nodemon
