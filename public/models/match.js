@@ -28,7 +28,11 @@ const matchSchema = new mongoose.Schema({
     level: {
         type: String,
         required: true,
-    }
+    },
+    display: {
+        type: String,
+        required: true,
+    },
 })
 
 const Match = mongoose.model('Match',matchSchema);
