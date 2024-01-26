@@ -11,28 +11,94 @@ mongoose.connect('mongodb://127.0.0.1:27017/ZanskarSports',{useNewUrlParser: tru
 
 const matches_till_friday = [
     {
-        opponent: 'Shivalik',
-        sport: 'Football',
-        
-        level: 'qualifier'
+        opponent: 'Girnar',
+        sport: 'Cricket',
+        date: 26,
+        month: 1,
+        hrs: 13,
+        mins: 0,
+        level: 'Pool Stage',
+        display: "26 Jan 1:00PM"
     },
     {
-        opponent: 'Udaigiri',
+        opponent: 'Shivalik',
+        sport: 'Cricket',
+        date: 4,
+        month: 2,
+        hrs: 8,
+        mins: 30,
+        level: 'Pool Stage',
+        display: "4 Feb 8:30AM"
+    },
+    {
+        opponent: 'Vindy',
+        sport: 'Squash',
+        date: 27,
+        month: 1,
+        hrs: 18,
+        mins: 0,
+        level: 'Pool Stage',
+        display: "27 Jan 6:00PM"
+    },
+    {
+        opponent: 'Aravali',
+        sport: 'Squash',
+        date: 31,
+        month: 1,
+        hrs: 18,
+        mins: 0,
+        level: 'Pool Stage',
+        display: "31 Jan 6:00PM"
+    },
+    {
+        opponent: 'Satpura',
         sport: 'Football',
-        date: new Date('December 17, 1995 03:28:00'),
-        level: 'qualifier'
+        date: 30,
+        month: 1,
+        hrs: 19,
+        mins: 0,
+        level: 'Pool Stage',
+        display: "30 Jan 7:00PM"
+    },
+    {
+        opponent: 'Kumaon',
+        sport: 'Football',
+        date: 2,
+        month: 2,
+        hrs: 20,
+        mins: 0,
+        level: 'Pool Stage',
+        display: "2 Feb 8:00PM"
+    },
+    {
+        opponent: 'Vindy',
+        sport: 'Football',
+        date: 4,
+        month: 2,
+        hrs: 20,
+        mins: 0,
+        level: 'Pool Stage',
+        display: "4 Feb 8:00PM"
+    },
+    {
+        opponent: 'Shivalik',
+        sport: 'Tennis',
+        date: 29,
+        month: 1,
+        hrs: 18,
+        mins: 45,
+        level: 'Pool Stage',
+        display: "29 Jan 6:45PM"
     },
     {
         opponent: 'Karakoram',
-        sport: 'Cricket',
-        date: new Date('December 18, 1995 03:24:00'),
-        level: 'qualifier'
-    },
-    {
-        opponent: 'Shivalik',
-        sport: 'Volleyball',
-        date: new Date('December 19, 1995 03:24:00'),
-        level: 'qualifier'
+        sport: 'Hockey',
+        date: 29,
+        month: 1,
+        hrs: 19,
+        mins: 0,
+        level: 'Pool Stage',
+        display: "29 Jan 7:00PM"
     },
 ]
 
