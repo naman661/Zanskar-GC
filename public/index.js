@@ -17,15 +17,12 @@ app.set('view engine','ejs');
 
 app.use(express.static(path.join(__dirname,'views')));
 
-const date1 = new Date('01/25/1994');
-const date2 = new Date('01/01/1996');
+const date1 = new Date();
 app.get('/matches',async(req,res)=>{
     const matches = await Match.find({})
-    const matches_today = matches.filter((m) => m.date > date1 & m.date<date2);
-    const matches_upcoming = matches.filter((m) => m.date > date2 );
-    // console.log(matches_temp)
+    const matches_today = matches.filter((m) => m.date.getDate()==date1.getDate() & m.date.getMonth()==date1.getMonth());
+    const matches_upcoming = matches.filter((m) => m.date.getMonth() > date1.getMonth() | (m.date.getDate()>date1.getDate()&m.date.getMonth()==date1.getMonth()));
     const data = {
-        
         matchesToday: matches_today,
         matchesUpcoming: matches_upcoming
     };

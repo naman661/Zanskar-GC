@@ -13,7 +13,7 @@ const matches_till_friday = [
     {
         opponent: 'Shivalik',
         sport: 'Football',
-        date: new Date('December 17, 1995 03:24:00'),
+        
         level: 'qualifier'
     },
     {
