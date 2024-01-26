@@ -10,9 +10,21 @@ const matchSchema = new mongoose.Schema({
         required: true, 
     },    
     date: {
-        type: Date,
+        type: Number,
         required: true, 
-    },  
+    }, 
+    month: {
+        type: Number,
+        required: true,
+    } ,
+    hrs: {
+        type: Number,
+        required: true,
+    },
+    mins: {
+        type: Number,
+        required: true,
+    },
     level: {
         type: String,
         required: true,
