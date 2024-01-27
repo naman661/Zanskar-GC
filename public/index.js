@@ -27,7 +27,7 @@ app.get('',async(req,res)=>{
         matchesToday: matches_today,
         matchesUpcoming: matches_upcoming
     };
-    res.render('matches/index',{data});
+    res.render('matches/tempo1',{data});
     
     //res.send('HERE')
 })

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZanskarSports</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body class="bg-black muli">
+    <nav class="w-100pc flex flex-column md-flex-row md-px-10 py-5 bg-black">
+        <div class="flex justify-between">
+            <a href="#" class="flex items-center p-2 mr-4 no-underline">
+                <img class="max-h-l10 w-auto" src="matches/assets/images/logo1.png" />
+            </a>
+            <a data-toggle="toggle-nav" data-target="#nav-items" href="#"
+                class="flex items-center ml-auto md-hidden indigo-lighter opacity-50 hover-opacity-100 ease-300 p-1 m-3">
+                <i data-feather="menu"></i>
+            </a>
+        </div>
+        <div id="nav-items" class="hidden flex sm-w-100pc flex-column md-flex md-flex-row md-justify-end items-center">
+            <a href="#features" class="fs-s1 mx-3 py-3 indigo-lighter no-underline hover-white hover-scale-up-3">Matches</a>
+            <a href="#zanskar_slider" class="fs-s1 mx-3 py-3 indigo-lighter no-underline hover-white hover-scale-up-3">Emotions</a>
+            <a href="#about-us" class="fs-s1 mx-3 py-3 indigo-lighter no-underline hover-white hover-scale-up-3 ">About Us</a>
+        </div>
+    </nav>
+    <hr>
+    <!-- hero section -->
+
+    <!-- features -->
+    <section id="features" class="p-10 md-p-l5">
+        <div class="flex flex-column md-flex-row mx-auto">
+            <div class="w-100pc md-w-40pc">
+                <div class="br-8 p-5 m-5">
+                    <h4 class="white fw-600 fs-m3 mb-5">Upcoming Matches</h4>
+                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">
+                        <ul>
+                        <% for(let match of data.matchesUpcoming) { %>
+                    <li>
+                        <%=match.sport + " : v/s " + match.opponent+" - "+match.display %></li>
+                        <% } %>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100pc md-w-40pc">
+                <div class="br-8 p-5 m-5">
+                    <h4 class="white fw-600 fs-m3 mb-5">Today's Matches</h4>
+                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">
+                        <ul>
+                        <% for(let match of data.matchesToday) { %>
+                    <li>
+                        <%=match.sport + " : v/s " + match.opponent+" - "+match.display %></li>
+                        <% } %>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100pc md-w-40pc">
+                <div class="br-8 p-5 m-5">
+                    <h4 class="white fw-600 fs-m3 mb-5">Final Standings</h4>
+                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">
+                        <ul>
+                            <li>Volleyball - 4th Position</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- slider -->
+    <section class="relative bg-indigo-lightest-10" id="zanskar_slider">
+        <div id="slider-1">
+            <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
+                <h2 class="white fs-l3 fw-900">Before losing on the ground, You lose in your head</h2>
+                <p class="indigo-lightest fw-600 fs-m1 opacity-30 my-5">~ Tatsam Ranjan Sharma (Basketball VC)</p>
+            </div>
+            <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
+                <h2 class="white fs-l3 fw-900">Bhyi Prince Fallback toh krle yaarrrr</h2>
+                <p class="indigo-lightest fw-600 fs-m1 opacity-30 my-5">~ Yadvendra Sir (Football Captain) </p>
+            </div>
+            <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
+                <h2 class="white fs-l3 fw-900">Ground pr attendace hogi sabki</h2>
+                <p class="indigo-lightest fw-600 fs-m1 opacity-30 my-5">~ Saurav Sir (Sports Secy) </p>
+            </div>
+            <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
+                <h2 class="white fs-l3 fw-900">Ae Bahiiiinchod ...</h2>
+                <p class="indigo-lightest fw-600 fs-m1 opacity-30 my-5">~ Garvit Sir (Cultural Secy) </p>
+            </div>
+        </div>
+        <ul class="absolute list-none w-100pc flex justify-between top-50pc">
+            <li><button
+                    class="prev ml-10 br-round border-indigo-lightest indigo-lightest  bg-transparent flex justify-center items-center p-2 focus-indigo-lighter outline-none"><i
+                        data-feather="chevron-left"></i></button></li>
+            <li><button
+                    class="next mr-10 br-round border-indigo-lightest indigo-lightest  bg-transparent flex justify-center items-center p-2  focus-indigo-lighter outline-none"><i
+                        data-feather="chevron-right"></i></button></li>
+        </ul>
+    </section>
+
+    <!-- big text -->
+    <section class="p-10 md-py-10" id="recent-news">
+        <div class="w-100pc md-w-70pc mx-auto py-10">
+            <h2 class="white fs-l2 md-fs-xl1 fw-900 lh-2">
+                What's Buzzing <span class="border-b bc-indigo bw-4"> 
+                    ?</span></h2>
+        </div>
+    </section>
+
+    <!-- product options -->
+
+    <!-- testimonials -->
+    <section class="p-10 md-p-l5">
+        <div id="slider-2">
+            <div class="px-3">
+                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
+                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider"> All Badminton matches are postponed for now. </p>
+                    <div class="flex items-center my-5">
+                        <div class="ml-4 fs-s1">
+                            <div class="indigo-lightest">Prakkhyaat Sir</div>
+                            <div class="indigo-lightest opacity-20">Badminton Captain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3">
+                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
+                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">Zanskar finished 4th in Volleyball!! </p>
+                    <div class="flex items-center my-5">
+                        <div class="ml-4 fs-s1">
+                            <div class="indigo-lightest">Utkarsh Sir</div>
+                            <div class="indigo-lightest opacity-20">Volleyball Team</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3">
+                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
+                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">Basketball matches scheduled after minor exams </p>
+                    <div class="flex items-center my-5">
+                        <div class="ml-4 fs-s1">
+                            <div class="indigo-lightest">Akshit Sir</div>
+                            <div class="indigo-lightest opacity-20">Basketball Captain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3">
+                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
+                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">TT Team crushed Shivalik's hopes</p>
+                    <div class="flex items-center my-5">
+                        <div class="ml-4 fs-s1">
+                            <div class="indigo-lightest">Samyak Jain</div>
+                            <div class="indigo-lightest opacity-20">TT Captain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog -->
+    <section class="p-0 md-p-5" id = "about-us">
+        <div class="flex flex-wrap">
+            <div class="w-100pc md-w-33pc p-10">
+                <a href="#" class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
+                    <img class="w-100pc" src="matches/assets/images/left_image.jpg" alt="">
+                    <p class="fw-600 white fs-m3 mt-3">
+                        "Guiding lights of triumph" : Our best players shine bright with the cherished trophy of victory
+                    </p>
+                    <div class="indigo fs-s3 italic after-arrow-right my-4"> by Chat-GPT 3.5</div>
+                </a>
+            </div>
+            <div class="w-100pc md-w-33pc p-10">
+                <a href="#" class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
+                    <img class="w-100pc" src="matches/assets/images/middle_image.jpeg" alt="">
+                    <p class="fw-600 white fs-m3 mt-3">
+                        "Even in the darkest moments, hold onto hope. Through adversity blooms the brightest victories"
+                    </p>
+                    <div class="indigo fs-s3 italic after-arrow-right my-4"> by Chat-GPT 3.5</div>
+                </a>
+            </div>
+            <div class="w-100pc md-w-33pc p-10" id="tech-team">
+                <a href="#" class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
+                    <img class="w-100pc" src="matches/assets/images/right-image.jpg" alt="">
+                    <p class="fw-600 white fs-m3 mt-3">
+                        Website banane mein lawde lg gye re.....m
+                    </p>
+                    <div class="indigo fs-s3 italic after-arrow-right my-4">by Tech Team</div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="p-5 md-p-l5 bg-indigo-lightest-10">
+        <div class="flex flex-wrap">
+            <div class="md-w-25pc mb-10">
+                <img src="matches/assets/images/logo1.png" class="w-l10" alt="">
+                <hr>
+                <div class="white opacity-70 fs-s2 mt-4 md-pr-10">
+                    <p>
+                        We stand as reigning champions of the General Sports Championship, epitomizing athleticism and unwavering dedication. Fueled by passion and relentless pursuit of excellence, we push boundaries and defy odds. Our journey is defined by triumphs and resilience, united by the fervor of competition. Join us as we defend our title, inspiring and uniting through the power of sport.
+                    </p>
+                </div>
+            </div>
+            <div class="w-100pc md-w-50pc">
+                <div class="flex justify-around">
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white">Back To Top</h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="#features" class="white opacity-70 no-underline hover-underline">Matches</a></li>
+                            <li class="my-3"><a href="#zanskar-slider" class="white opacity-70 no-underline hover-underline">Emotions</a>
+                            </li>
+                            <li class="my-3"><a href="#recent-news"
+                                class="white opacity-70 no-underline hover-underline">Recent Updates</a></li>
+                            <li class="my-3"><a href="#about-us"
+                                    class="white opacity-70 no-underline hover-underline">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white">Support</h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="#tech-team" class="white opacity-70 no-underline hover-underline">
+                                Naman Kale, NB-20</a></li>
+                            <li class="my-3"><a href="https://www.instagram.com/madhav_maheshwari1608/" class="white opacity-70 no-underline hover-underline">
+                                Madhav Maheshwari, NB-25</a></li>
+                            <li class="my-3"><a href="https://www.instagram.com/x.x.dawnmist.x.x/" class="white opacity-70 no-underline hover-underline">
+                                Suchir Kohli, NB-24</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100pc md-w-25pc">
+                <h5 class="white">Suggestions<br><br> <a href="https://www.instagram.com/ranjan_tatsam/" class="white opacity-70 no-underline hover-underline">Tatsam, ND-28</a></h5>
+                <p><br><hr><br>
+                    <a href="https://www.instagram.com/zanskar_sports_/" class="relative p-5 white hover-scale-up-1 ease-400"><i
+                        data-feather="instagram" class="absolute-center h-7"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="matches/assets/js/script.js"></script>
+</body>
+
+</html>
