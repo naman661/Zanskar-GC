@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname,'views')));
 
 const date1 = new Date();
 
-app.get('/matches',async(req,res)=>{
+app.get('',async(req,res)=>{
     const matches = await Match.find({})
     const matches_today = matches.filter((m) => m.date==date1.getDate() & (date1.getMonth()+1)==m.month);
     const matches_upcoming = matches.filter((m) => m.date.month > (date1.getMonth()+1) | (m.date>date1.getDate()&(m.month-1)==date1.getMonth()));
