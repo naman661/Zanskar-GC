@@ -5,7 +5,6 @@
 
 
 
-# Make a separate branch for your pushes
-#   will upload requirements.txt soon -- p.s  Naman
+
 
 
